@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>login form</title>
+	<style type="text/css">
+		body{
+			margin:0;
+			padding: 0;
+			font-family: monospace;
+			background-image:url("night_2_by_Deon_Maritz_1024_682_90_s.jpg" ) ;
+			background-repeat: no-repeat;
+			background-size:100% 1400%;
+			color: white;
+			transition:.4s;
+		
+		}
+		.wellcome-info{
+			 font-size:25px;
+			 text-align: center; 
+			 color:white;
+			 text-transform: uppercase;
+			 font-family:fantasy;
+		}
+		
+		.log-in{
+			position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+            border:1px solid #f2f2f2;
+            padding:70px;
+            // background-color: grey;
+            // filter:blur(4px);
+            border-radius: 25px;
+            width:300px;
+		}
+		.log-in h2{
+			text-align:center;
+			text-transform:uppercase;
+			font-size:29px;
+
+		}
+		.log-in p{
+			font-size:16px;
+			padding: 10px 0;
+
+		}
+		input[type=text]{
+			text-align: center;
+			padding: 6px;
+			border-radius: 25px;
+			
+		}
+		input:hover,input:focus{
+			background-color:#999999;
+			color: white;
+			transition:1s;
+			transform:scale(1.5,1.5);
+			border:2px solid #66ff66;
+			outline:none;
+
+
+		}
+        input[type=password]{
+			text-align: center;
+			padding: 6px;
+			border-radius: 25px;
+			
+		}
+		button[type=submit]{
+			
+			margin-top:25px ;
+			padding:9px;
+			margin-left:120px;
+
+			border-radius: 15px;
+			cursor:pointer;
+
+
+		}
+		button:hover,button:focus{
+			outline: none;
+            background-color:#66ff66;
+            color: white;
+			transition:1s;
+			transform:scale(1.5,1.5);
+			border:2px solid #66ff66;
+		}
+		@media only screen and (max-width: 600px) {
+			  body {
+			    background-color: red;
+			  }
+        }
+
+	</style>
+	
+
+</head>
+<body>
+	 <p id="demo" class="wellcome-info">LOG IN TO ACCESS YOUR ACCOUNT asap!</p>
+
+	<div class="log-in">
+
+     <div>
+		<form id="myform"  name="myform1" action="#">
+			<h2 >Log-In</h2>
+			
+				<p>FirstName:</p>
+				<input type="text" name="firstName"id="firstName" value="" placeholder="FirstName"  size="40%" id="name1">
+
+				<p>LastName:</p>
+				<input type="text" name="LastName" id="LastName" value="" placeholder="LastName" size="40%" id="name2">
+
+				<p>Password:</p>
+				<input type="Password" name="LastName" id="Password" placeholder="Password" size="40%"><br>
+
+				<button type="Submit" id="button" >Submit</button>
+				<p id="meso"></p>
+		</form>
+     </div>
+	</div>
+
+
+<script type="text/javascript">
+	  var myform=document.forms.myform1;
+	   var message= document.getElementById("meso");
+        
+        myform.onsubmit=function{
+	   	 if (myform.name.value=" ") {
+           message.innerHTML=" please enter your name"; 
+           message.style.color="white";
+           return false;
+	   	 }else{
+	   	 	message.innerHTML="";
+	   	 	return true;
+	   	 }
+	   }
+</script>
+</body>
+
+</html>
